@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7DD811922BECAEF400C8ABC4 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7DD811912BECAEF400C8ABC4 /* Lottie */; };
 		7DD811942BECAF3000C8ABC4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD811932BECAF3000C8ABC4 /* LottieView.swift */; };
+		7DF4D7F72BECF75F002E6D03 /* LottiePlusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4D7F62BECF75F002E6D03 /* LottiePlusView.swift */; };
 		BB031717296084C8000F6AC2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB031716296084C8000F6AC2 /* Constants.swift */; };
 		BB14355B295A08D200AFEB46 /* Cascading Likes.json in Resources */ = {isa = PBXBuildFile; fileRef = BB14355A295A08D200AFEB46 /* Cascading Likes.json */; };
 		BB14355D295A095600AFEB46 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB14355C295A095600AFEB46 /* LikesView.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		7DD811932BECAF3000C8ABC4 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		7DF4D7F62BECF75F002E6D03 /* LottiePlusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottiePlusView.swift; sourceTree = "<group>"; };
 		BB031716296084C8000F6AC2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB14355A295A08D200AFEB46 /* Cascading Likes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Cascading Likes.json"; sourceTree = "<group>"; };
 		BB14355C295A095600AFEB46 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				BBA2772C295964010034BB3A /* AddProgressView.swift */,
 				BB2298DB2958E1CB00D41B17 /* CelebrationView.swift */,
 				BB14355C295A095600AFEB46 /* LikesView.swift */,
+				7DF4D7F62BECF75F002E6D03 /* LottiePlusView.swift */,
 				7DD811932BECAF3000C8ABC4 /* LottieView.swift */,
 				BBA27725295957B70034BB3A /* Lottie Files */,
 				BB2298DD2958E1CC00D41B17 /* Assets.xcassets */,
@@ -143,7 +146,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					BB2298D52958E1CB00D41B17 = {
 						CreatedOnToolsVersion = 14.2;
@@ -201,6 +204,7 @@
 				7DD811942BECAF3000C8ABC4 /* LottieView.swift in Sources */,
 				BBA2772B295962BC0034BB3A /* AppTabView.swift in Sources */,
 				BB031717296084C8000F6AC2 /* Constants.swift in Sources */,
+				7DF4D7F72BECF75F002E6D03 /* LottiePlusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +247,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -303,6 +308,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

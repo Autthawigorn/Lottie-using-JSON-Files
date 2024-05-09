@@ -11,7 +11,9 @@
 import SwiftUI
 
 struct AddProgressView: View {
+    
     @State private var inProgress = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -31,7 +33,14 @@ struct AddProgressView: View {
                 }
                 .disabled(inProgress)
                 if inProgress {
-                    ProgressView()
+                    LottieView(name: Constants.blueDots,
+                               loopMode: .loop,
+                               animationSpeed: 1.5,
+                               play: $inProgress)
+                    
+                   // .frame(width: 10) can only scale up if using LottleView
+                   
+                    .scaleEffect(0.3) // use this if need scale down
                 }
             }
             .navigationTitle("Custom Progress")

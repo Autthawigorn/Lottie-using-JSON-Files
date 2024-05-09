@@ -3,7 +3,7 @@
 // by  Stewart Lynch on 2022-12-26
 // Using Swift 5.0
 // Running on macOS 13.1
-// 
+//
 // Folllow me on Mastodon: @StewartLynch@iosdev.space
 // Subscribe on YouTube: https://youTube.com/@StewartLynch
 // Buy me a ko-fi:  https://ko-fi.com/StewartLynch
@@ -12,23 +12,42 @@ import SwiftUI
 
 struct LikesView: View {
     @State private var myPosts: [LikePost] = LikePost.sampleData
+    @State private var play = false
+    @State private var selectedPostID = UUID()
     var body: some View {
         NavigationStack {
             List {
-                ForEach($myPosts ){ $post in
+                ForEach($myPosts){ $post in
                     VStack(alignment: .leading){
                         Text(post.text)
                         HStack {
                             Spacer()
                             Button {
-                                withAnimation {
+                                if !post.isLiked {
                                     post.isLiked.toggle()
+                                    play = true
+                                    selectedPostID = post.id
+                                    // play animation
+                                } else {
+                                    withAnimation {
+                                        post.isLiked.toggle()
+                                    }
                                 }
                             } label: {
                                 Image(systemName: post.isLiked ? "heart.fill" : "heart")
                                     .foregroundColor(.red)
                             }
                             .buttonStyle(.plain)
+                            .overlay(alignment: .center) {
+                                if selectedPostID == post.id {
+                                    LottieView(name: Constants.cascadeLike,
+                                                   animationSpeed: 4,
+                                                  // contentMode: .scaleAspectFill,
+                                                   play: $play)
+                                    .scaleEffect(0.06)
+                                    .allowsHitTesting(false)
+                                }
+                            }
                         }
                     }
                 }
